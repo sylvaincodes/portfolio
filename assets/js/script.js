@@ -56,6 +56,7 @@ const keepcontent = function () {
   document.getElementById('left-sidebar-item-web').style.backgroundColor = myFunction_get('--white-2');
   document.getElementById('sidebar-title-web').style.color = myFunction_get('--black');
 }
+
 parent_list_web.addEventListener('mouseover',opensublist);
 parent_list_web.addEventListener('mouseleave',keepcontent);
 sub_list_web.addEventListener('mouseleave',closesublist);
