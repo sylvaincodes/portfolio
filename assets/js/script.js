@@ -44,7 +44,11 @@ search_input.addEventListener('mouseleave',lostfocus);
 
 
 const opensublist570 = function () { 
+
+    document.getElementById('left-sidebar-item-web-570').style.opacity = "1";
     sub_list_web_570.classList.add('active'); 
+    document.getElementById('left-sidebar-item-mobile-570').style.opacity = "0.3";
+    document.getElementById('left-sidebar-item-game-570').style.opacity = "0.3";
     document.getElementById('sidebar-title-web-570').style.color = myFunction_get('--black');
     document.getElementById('tv-outline-570').style.color=myFunction_get('--orange');
 }
@@ -57,12 +61,23 @@ const opensublist = function () {
     document.getElementById('tv-outline').style.color=myFunction_get('--orange');
 }
 const closesublist = function () { 
+
+  document.getElementById('left-sidebar-item-web-570').style.opacity = "1";
+    document.getElementById('left-sidebar-item-mobile-570').style.opacity = "1";
+    document.getElementById('left-sidebar-item-game-570').style.opacity = "1";
+
     sub_list_web.classList.remove('active'); 
     document.getElementById('tv-outline').style.color=myFunction_get('--white');
     document.getElementById('left-sidebar-item-web').style.backgroundColor = myFunction_get('--black');
     document.getElementById('sidebar-title-web').style.color = myFunction_get('--white-2');
 }
 const closesublist570 = function () { 
+
+
+  document.getElementById('left-sidebar-item-web-570').style.opacity = "1";
+    document.getElementById('left-sidebar-item-mobile-570').style.opacity = "1";
+    document.getElementById('left-sidebar-item-game-570').style.opacity = "1";
+
     sub_list_web_570.classList.remove('active'); 
     document.getElementById('tv-outline').style.color=myFunction_get('--white');
     document.getElementById('left-sidebar-item-web-570').style.backgroundColor = myFunction_get('--black');
@@ -104,18 +119,32 @@ const opensublistmobile = function () {
 }
 const opensublistmobile570 = function () { 
 
+    document.getElementById('left-sidebar-item-mobile-570').style.opacity = "1";
     closesublist570();
+    document.getElementById('left-sidebar-item-web-570').style.opacity = "0.3";
+    document.getElementById('left-sidebar-item-game-570').style.opacity = "0.3";
     sub_list_mobile_570.classList.add('active'); 
     document.getElementById('sidebar-title-mobile-570').style.color = myFunction_get('--black');
     document.getElementById('tv-outline').style.color=myFunction_get('--orange');
 }
 const closesublistmobile = function () { 
+
+
+  document.getElementById('left-sidebar-item-web-570').style.opacity = "1";
+    document.getElementById('left-sidebar-item-mobile-570').style.opacity = "1";
+    document.getElementById('left-sidebar-item-game-570').style.opacity = "1";
+
     sub_list_mobile.classList.remove('active'); 
     document.getElementById('tv-outline').style.color=myFunction_get('--white');
     document.getElementById('left-sidebar-item-mobile').style.backgroundColor = myFunction_get('--black');
     document.getElementById('sidebar-title-mobile').style.color = myFunction_get('--white-2');
 }
 const closesublistmobile570 = function () { 
+
+    document.getElementById('left-sidebar-item-web-570').style.opacity = "1";
+    document.getElementById('left-sidebar-item-mobile-570').style.opacity = "1";
+    document.getElementById('left-sidebar-item-game-570').style.opacity = "1";
+
     sub_list_mobile_570.classList.remove('active'); 
     document.getElementById('tv-outline').style.color=myFunction_get('--white');
     document.getElementById('left-sidebar-item-mobile-570').style.backgroundColor = myFunction_get('--black');
@@ -140,6 +169,10 @@ parent_list_mobile_570.addEventListener('mouseleave',keepcontentmobile570);
 
 sub_list_mobile.addEventListener('mouseleave',closesublistmobile);
 sub_list_mobile_570.addEventListener('mouseleave',closesublistmobile570);
+
+
+document.getElementById('left-sidebar-item-game-570').style.opacity = "1";
+
 
 /*
 (function(){

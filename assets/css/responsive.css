@@ -178,7 +178,7 @@
 	   display: flex;
 	   flex-direction: column;
 	   justify-content: center;
-	   align-items: flex-start;
+	   align-items: stretch;
 	   cursor: pointer;
 	}
 
@@ -261,12 +261,13 @@
 	    background: var(--black);
 	    color: var(--white-2);
 	    position: absolute;
-	    top: 288px;
-	    left: 157px;
+	    top: 266px;
+	    left: 180px;
 	    display: flex;
 	    flex-direction: column;
 	    visibility: hidden;
 	    z-index: 4;
+	    right: 0;
 	}
 
 
@@ -299,13 +300,13 @@
         background: var(--black);
 	    color: var(--white-2);
 	    position: absolute;
-	    top: 421px;
-	    left: 157px;
+	    top: 382px;
+	    left: 180px;
 	    display: flex;
 	    flex-direction: column;
         visibility: hidden;
        	z-index: 3;
-
+	    right: 0;
     }
 
 
@@ -399,5 +400,7 @@
     }
 
 
-
+    .youtube{
+    	display: none;
+    }
 }
