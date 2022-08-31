@@ -205,6 +205,7 @@ function currentSlide(n) {
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
+
   let dots = document.getElementsByClassName("dot");
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
@@ -214,9 +215,31 @@ function showSlides(n) {
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+
+  if (slides.length==0) {}else {    
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
 }
+
+
+
+
+const mobile_menu = document.querySelector('[data-mobile-menu]');
+const overlay = document.querySelector('[data-overlay]');
+
+const btn_click_open_menu_fixed = document.querySelector('[data-nav-toggler-fixed]');
+const openMenu = function () { 
+      overlay.classList.add('active') ;
+    mobile_menu.classList.add('active'); 
+}
+btn_click_open_menu_fixed.addEventListener('click',openMenu);
+
+const btn_click_close_menu = document.querySelector('[data-close-menu]');
+const closeMenu = function () { mobile_menu.classList.remove('active');    
+overlay.classList.remove('active'); 
+}
+btn_click_close_menu.addEventListener('click',closeMenu);
 
 
 /*
