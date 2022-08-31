@@ -22,6 +22,7 @@
 <body>
 
         <header>
+
             <section class="header-top">
                 <div class="container">
                     <h1 class="logo-header">
@@ -35,11 +36,25 @@
                         <span class="letter">i</span>
                         <span class="letter">o</span>
                     </h1>
+
                     <div class="search-container-input">
                             <input type="text" class="search-field" id="search-field" placeholder="" data-search-input>
                             <ion-icon class="search-icon" name="search-outline" data-search-icon></ion-icon>
-                    </p>
+                    </div>
                 </div>
+            </section>
+            <section class="mobile-search">
+                <div class="container">
+                        <div class="mobile-search-container-input">
+                            <input type="text" class="search-field" id="search-field" placeholder="Recherche" data-search-input>
+                            <ion-icon class="search-icon" name="search-outline" data-search-icon></ion-icon>
+                        </div>
+                          <button aria-label="Ouvrir le menu" class="nav-open-btn" aria-label="open menu" data-nav-toggler-fixed>
+                                <span class="line line-1"></span>
+                                <span class="line line-2"></span>
+                                <span class="line line-3"></span>
+                         </button>
+                    </div>
             </section>
             <nav class="header-main">
                 <div class="container">
@@ -106,8 +121,6 @@
                     <ul class="sub-list" id="data-sub-list-mobile" data-sub-list-mobile>
                         <li class="sub-item">html - css - react native</li>
                     </ul>
-
-
             </section>
 
             <section class="right-sidebar">
@@ -127,12 +140,73 @@
                     </ul>
                 </div>
             </section>
-            
+
+            <section class="mobile-sidebar">
+                <div class="container">
+                    <ul class="left-sidebar-list">
+                            
+                        <li class="left-sidebar-item" id="left-sidebar-item-web-570">
+                            <div class="sidebar-card" data-sidebar-card-web-570>
+                                <ion-icon id="tv-outline-570" class="tv-outline" name="tv-outline" data-tv-outline></ion-icon>
+                                <div class="sidebar-card-content">  
+                                    <h1 class="sidebar-title" id="sidebar-title-web-570">projets web </h1>
+                                    <p class="sidebar-text">
+                                        <span>html</span>
+                                        <span>css</span>
+                                        <span>javascript</span>
+                                        <span>php</span>
+                                        <span>laravel</span>
+                                        <span>react js</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+
+                        <ul class="sub-list" data-sub-list-web-570 id="data-sub-list-web">
+                            <li class="sub-item"> <a href="./web/html_css_javascript.html">  html - css - javascript </a> </li>
+                            <li class="sub-item"><a href="#"> html - css - react js </a> </li>
+                            <li class="sub-item"><a href="#"> html - css - ajax - jquery - php - laravel - mysql </a> </li>
+                            <li class="sub-item"><a href="#"> html - css - react js - node js </a> </li>
+                        </ul>
+
+                        <li class="left-sidebar-item" id="left-sidebar-item-mobile-570">
+                            <div class="sidebar-card" id="data-sidebar-card-mobile-570" data-sidebar-card-mobile-570>
+                                <ion-icon id="terminal-outline-570" class="sidebar-icon" name="terminal-outline" data-search-icon></ion-icon>
+                                <div class="sidebar-card-content">  
+                                    <h1 class="sidebar-title" id="sidebar-title-mobile-570" >projets mobile </h1>
+                                    <p class="sidebar-text">
+                                        <span>react native</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <ul class="sub-list" id="data-sub-list-mobile" data-sub-list-mobile-570>
+                            <li class="sub-item">html - css - react native</li>
+                        </ul>
+
+                        <li class="left-sidebar-item">
+                            <div class="sidebar-card" id="data-sidebar-card-mobile" data-sidebar-card-mobile>
+                                <ion-icon id="terminal-outline" class="sidebar-icon" name="logo-xbox" data-search-icon></ion-icon>
+                                <div class="sidebar-card-content">  
+                                    <h1 class="sidebar-title">projets jeux vidéos </h1>
+                                    <p class="sidebar-text">
+                                        <span>unreal engine</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <ul class="sub-list" id="data-sub-list-game" data-sub-list-game>
+                            <li class="sub-item">unreal engine</li>
+                        </ul>
+                    </ul>
+
+                </div>
+
+            </section>
         </main>
 
-
         <footer>
-            <div class="container">
+            <section class="container">
     
                         <button class="logo-footer">
                             <a target="__blank" href="https://www.youtube.com/channel/UCmPmOdDw941pdi8YmIPjyEA">
@@ -142,7 +216,7 @@
                         </button>
                         <button class="logo-footer">
                             <a target="__blank" href="https://www.youtube.com/channel/UCmPmOdDw941pdi8YmIPjyEA">
-                            <ion-icon class="search-logo blue" name="logo-twitter" data-search-icon></ion-icon>
+                                <ion-icon class="search-logo blue" name="logo-twitter" data-search-icon></ion-icon>
                                  <span>twitter</span> 
                             </a>
                         </button>
@@ -155,11 +229,11 @@
                         <button class="logo-footer">
                              <a target="__blank" href=" https://linkedin.com/in/sylvain-olympio-adande">
                                 <ion-icon class="search-logo gris" name="logo-linkedin" data-search-icon></ion-icon>
-                                <span>linkedin</span> 
+                                <span>linked</span> 
                             </a>
                         </button>
     
-            </div>
+            </section>
         </footer>
 
         <!--
