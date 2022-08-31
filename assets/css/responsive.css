@@ -4,7 +4,7 @@
 */
 @media screen and (max-width:570px){
 
-	html{font-size:20px;font-family : var(--ff-mali);}
+	html{font-size:14px;font-family : var(--ff-mali);}
 
 	body{
 	     background-image: url('../images/coding-on-laptop.jpg');
@@ -73,7 +73,7 @@
 	.mobile-search .container {
     	display: flex;
     	flex-direction: row;
-    	justify-content: space-around;
+    	justify-content: space-between;
     	background: transparent;
     	width: 100%;
     	border-bottom: 2px solid var(--black);
