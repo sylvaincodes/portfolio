@@ -414,17 +414,15 @@
     	display: none;
     }
 
-
     /*MAIN*/
    .book-css .container{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        padding: 30px;
         overflow: auto hidden;
-        margin: 15px;
         min-width: 100%;
+        margin-top: 10px;
     }
 
     .card {
@@ -439,7 +437,7 @@
 
     .card img {
         width: 100%;
-        height: 500px;
+        height: 400px;
         object-fit: cover;
         opacity: 0.5;
         z-index: 2;
@@ -451,7 +449,7 @@
         top: 100px;
         left: 20px;
         color: var(--black);
-        font-size: var(--fs-5);
+        font-size: var(--fs-8);
             z-index: 4;
             width: 100%;
 
