@@ -96,15 +96,21 @@ const keepcontent570 = function () {
   document.getElementById('sidebar-title-web-570').style.color = myFunction_get('--black');
 }
 
+
+if (parent_list_web_570) {
 parent_list_web_570.addEventListener('mouseover',opensublist570);
 parent_list_web_570.addEventListener('mouseleave',keepcontent570);
+}
 
+if (parent_list_web) {
 parent_list_web.addEventListener('mouseover',opensublist);
 parent_list_web.addEventListener('mouseleave',keepcontent);
+}
 
+if (sub_list_web) {
 sub_list_web.addEventListener('mouseleave',closesublist);
 sub_list_web_570.addEventListener('mouseleave',closesublist570);
-
+}
 
 
 
@@ -161,17 +167,56 @@ const keepcontentmobile570 = function () {
   document.getElementById('left-sidebar-item-mobile-570').style.backgroundColor = myFunction_get('--white-2');
   document.getElementById('sidebar-title-mobile-570').style.color = myFunction_get('--black');
 }
-parent_list_mobile.addEventListener('mouseover',opensublistmobile);
-parent_list_mobile_570.addEventListener('mouseover',opensublistmobile570);
 
-parent_list_mobile.addEventListener('mouseleave',keepcontentmobile);
-parent_list_mobile_570.addEventListener('mouseleave',keepcontentmobile570);
+if (parent_list_mobile) {
+  parent_list_mobile.addEventListener('mouseover',opensublistmobile);
+  parent_list_mobile.addEventListener('mouseleave',keepcontentmobile);
+}
 
+
+if (sub_list_mobile) {
 sub_list_mobile.addEventListener('mouseleave',closesublistmobile);
+}
+
+if (parent_list_web_570 ) {
+parent_list_mobile_570.addEventListener('mouseover',opensublistmobile570);
+parent_list_mobile_570.addEventListener('mouseleave',keepcontentmobile570);
 sub_list_mobile_570.addEventListener('mouseleave',closesublistmobile570);
+}
 
-
+if (document.getElementById('left-sidebar-item-game-570')) {
 document.getElementById('left-sidebar-item-game-570').style.opacity = "1";
+document.getElementById('left-sidebar-item-game-570').style.opacity = "1";
+}
+
+
+/*Carousel mobile*/
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
 
 
 /*

@@ -285,12 +285,20 @@
     #data-sub-list-web li{
         padding: 15px;
         cursor: pointer;
-        
+
     }
 
-    #data-sub-list-web li:hover {
-        background: var(--white-2);
+    #data-sub-list-web li a{
+        color: var(--white-2);
+    }
+
+
+    #data-sub-list-web li:hover a{
         color: var(--black);
+    }
+
+    #data-sub-list-web .sub-item:is(:hover,:hover) {
+        background: var(--white-2);
         padding: 10px;
         cursor: pointer;
     }
@@ -473,7 +481,7 @@
     .book-css .container{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         padding: 30px;
         overflow: hidden;
@@ -562,7 +570,7 @@
 
     .prochain {
         right: 0;
-       margin: 10px;
+       margin: auto;
     }
 
     .prochain ion-icon {

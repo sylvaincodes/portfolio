@@ -16,13 +16,13 @@
     <!-- 
         Insert CSS 
     -->
-    <link REL="stylesheet" TYPE="text/css" MEDIA="(max-width: 480px)" HREF="./assets/css/style.css">
-    <link REL="stylesheet" TYPE="text/css" MEDIA="(min-width: 1200px)" HREF="./assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
 <body>
 
         <header>
+
             <section class="header-top">
                 <div class="container">
                     <h1 class="logo-header">
@@ -36,17 +36,31 @@
                         <span class="letter">i</span>
                         <span class="letter">o</span>
                     </h1>
+
                     <div class="search-container-input">
                             <input type="text" class="search-field" id="search-field" placeholder="" data-search-input>
                             <ion-icon class="search-icon" name="search-outline" data-search-icon></ion-icon>
-                    </p>
+                    </div>
                 </div>
+            </section>
+            <section class="mobile-search">
+                <div class="container">
+                        <div class="mobile-search-container-input">
+                            <input type="text" class="search-field" id="search-field" placeholder="Recherche" data-search-input>
+                            <ion-icon class="search-icon" name="search-outline" data-search-icon></ion-icon>
+                        </div>
+                          <button aria-label="Ouvrir le menu" class="nav-open-btn" aria-label="open menu" data-nav-toggler-fixed>
+                                <span class="line line-1"></span>
+                                <span class="line line-2"></span>
+                                <span class="line line-3"></span>
+                         </button>
+                    </div>
             </section>
             <nav class="header-main">
                 <div class="container">
                     <ul class="nav-menu-top">
                         <li class="nav-menu-item">
-                            <a href="../index.html" class="nav-link active">acceuil</a>
+                            <a href="#" class="nav-link active">acceuil</a>
                         </li>
                         <li class="nav-menu-item">
                             <a href="#" class="nav-link">blog</a>
@@ -62,24 +76,30 @@
         <main>
             
             <section class="book-css">
-                <div class="container">
-                    <div class="card">
+                <div class="container slideshow-container">
+
+                     <a class="prochain" target="__blank" title="precedent" onclick="plusSlides(-1)">
+                            <ion-icon slot="precedent" name="chevron-back-circle-outline"></ion-icon>
+                        </a>
+
+
+                    <div class="card mySlides">
                       <img src="../assets/images/design_air/psd.png" alt="Avatar" class="card-item">
                       <div class="card-content">
                         <p>Ecommerce <strong>Air</strong> </p> 
                         <p>Responsive</p> 
-                        <a target="__blank" title="voir" href="https://sylvaincodes.github.io/air">
+                        <a class="link-url" target="__blank" title="voir" href="https://sylvaincodes.github.io/air">
                        <ion-icon title="voir" name="eye-outline"></ion-icon>
                        </a>
                       </div>
                     </div>
 
-                    <div class="card">
+                    <div class="card mySlides">
                       <img src="../assets/images/design_gear/psd.png" alt="Avatar" class="card-item">
                       <div class="card-content">
                         <p>Ecommerce <strong>Gear</strong> </p> 
                         <p>Responsive</p> 
-                       <a target="__blank" title="voir" href="https://sylvaincodes.github.io/gear">
+                       <a class="link-url" target="__blank" title="voir" href="https://sylvaincodes.github.io/gear">
                        <ion-icon title="voir" name="eye-outline"></ion-icon>
                        </a>
                       </div>
@@ -87,9 +107,17 @@
                         <!-- <a target="" title="" href="https://sylvaincodes.github.io/gear">
                             <ion-icon name="chevron-back-circle-outline"></ion-icon>                      
                         </a> -->
-                        <a class="prochain" target="__blank" title="prochain" href="#">
+                       <a class="prochain" target="__blank" title="prochain" onclick="plusSlides(-1)">
                             <ion-icon slot="prochain" name="chevron-forward-circle-outline"></ion-icon>
                        </a>
+
+
+                       <div class="dots">
+                          <span class="dot" onclick="currentSlide(1)"></span> 
+                          <span class="dot" onclick="currentSlide(2)"></span> 
+                          <span class="dot" onclick="currentSlide(3)"></span> 
+                      </div>
+
 
                 </div>
             </section>
