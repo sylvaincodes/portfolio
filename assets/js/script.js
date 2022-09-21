@@ -47,6 +47,7 @@ const opensublist570 = function () {
 
     document.getElementById('left-sidebar-item-web-570').style.opacity = "1";
     sub_list_web_570.classList.add('active'); 
+    sub_list_mobile.classList.remove('active'); 
     document.getElementById('left-sidebar-item-mobile-570').style.opacity = "0.3";
     document.getElementById('left-sidebar-item-game-570').style.opacity = "0.3";
     document.getElementById('sidebar-title-web-570').style.color = myFunction_get('--black');
@@ -57,6 +58,7 @@ const opensublist = function () {
 
    /* sub_list_mobile.classList.remove('active'); */
     sub_list_web.classList.add('active'); 
+    sub_list_mobile.classList.remove('active'); 
     document.getElementById('sidebar-title-web').style.color = myFunction_get('--black');
     document.getElementById('tv-outline').style.color=myFunction_get('--orange');
 }
@@ -176,6 +178,7 @@ if (parent_list_mobile) {
 
 if (sub_list_mobile) {
 sub_list_mobile.addEventListener('mouseleave',closesublistmobile);
+
 }
 
 if (parent_list_web_570 ) {

@@ -277,6 +277,8 @@
 	    visibility: hidden;
 	    z-index: 4;
 	    right: 0;
+		transform: translateY(-600px);
+        transition: 1s;
 	}
 
 
@@ -303,6 +305,7 @@
 
 	#data-sub-list-web.active{
 	    visibility: visible;
+		transform: translateY(0px);
 	}
 
 
@@ -317,6 +320,9 @@
         visibility: hidden;
        	z-index: 3;
 	    right: 0;
+		transform: translateY(-600px);
+        transition: 1s;
+
     }
 
 
@@ -334,6 +340,7 @@
 
     #data-sub-list-mobile.active{
         visibility: visible;
+		transform: translateY(0px);
     }
 
     #data-sub-list-game{
@@ -362,6 +369,8 @@
 
     #data-sub-list-game.active{
         visibility: visible;
+		transform: translateY(0px);
+
     }
     
 
@@ -554,9 +563,8 @@
 	  background-color: #717171;
 	}
 
-	@keyframes fade {/* The dots/bullets/indicators */
 	.dot {
-	  cursor: pointer;
+		cursor: pointer;
 	  height: 15px;
 	  width: 15px;
 	  margin: 0 2px;
@@ -565,11 +573,12 @@
 	  display: inline-block;
 	  transition: background-color 0.6s ease;
 	}
-
+	
 	.active, .dot:hover {
-	  background-color: #717171;
+		background-color: #717171;
 	}
-
+	
+	@keyframes fade {/* The dots/bullets/indicators */
 	  from {opacity: .4} 
 	  to {opacity: 1}
 	}
@@ -739,7 +748,9 @@
 
 
 
-@media screen and (min-width:570px) and (max-width:1199px){
+@media screen and (min-width:570px) and (max-width:1199px)
+
+{
 
 	html{font-size:14px;font-family : var(--ff-mali);}
 
@@ -1011,6 +1022,8 @@
 	    visibility: hidden;
 	    z-index: 4;
 	    right: 0;
+		transform: translateY(-600px);
+        transition: 1s;
 	}
 
 
@@ -1036,6 +1049,7 @@
 
 	#data-sub-list-web.active{
 	    visibility: visible;
+		transform: translateY(0px);
 	}
 
 
@@ -1050,6 +1064,8 @@
         visibility: hidden;
        	z-index: 3;
 	    right: 0;
+		transform: translateY(-600px);
+        transition: 1s;
     }
 
 
@@ -1067,6 +1083,7 @@
 
     #data-sub-list-mobile.active{
         visibility: visible;
+		transform: translateY(0px);
     }
 
     #data-sub-list-game{
@@ -1095,12 +1112,14 @@
 
     #data-sub-list-game.active{
         visibility: visible;
+		transform: translateY(0px);
+
     }
     
 
 
 
-/*FOOTER*/
+	/*FOOTER*/
 
 	footer{
 
@@ -1272,9 +1291,8 @@
 	}
 
 	/* The dots/bullets/indicators */
-	@keyframes fade {/* The dots/bullets/indicators */
 	.dot {
-	  cursor: pointer;
+		cursor: pointer;
 	  height: 15px;
 	  width: 15px;
 	  margin: 0 2px;
@@ -1285,9 +1303,11 @@
 	}
 
 	.active, .dot:hover {
-	  background-color: #717171;
+		background-color: #717171;
 	}
-
+	
+	
+	@keyframes fade {/* The dots/bullets/indicators */
 	  from {opacity: .4} 
 	  to {opacity: 1}
 	}
@@ -1302,5 +1322,6 @@
 	    left: 254px;
 	}
 	
+	.mobile-menu{display:none}
 
 }

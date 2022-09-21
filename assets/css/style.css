@@ -289,6 +289,8 @@
         display: flex;
         flex-direction: column;
         visibility: hidden;
+        transform: translateY(-600px);
+        transition: 1s;
     }
 
 
@@ -315,6 +317,7 @@
 
     #data-sub-list-web.active{
         visibility: visible;
+        transform: translateY(0px);
     }
 
 
@@ -423,6 +426,8 @@
         display: flex;
         flex-direction: column;
         visibility: hidden;
+        transform: translateY(600px);
+        transition: 1s;
     }
 
 
@@ -440,6 +445,7 @@
 
     #data-sub-list-mobile.active{
         visibility: visible;
+        transform: translateY(0px);
     }
 
 
