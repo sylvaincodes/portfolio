@@ -1,0 +1,161 @@
+/* -----------------------
+    - STYLES CSS
+------------------------ */
+
+/* 
+    * COPYRIGHT ADANDE SYLVAIN
+*/
+
+/* 
+    * CUSTOM CSS
+*/
+:root {
+
+    /* 
+        * COULEURS PRINCIPALES
+    */
+
+    --first-color: orange;
+    --second-color: blue;
+    --third-color: rgb(133, 218, 23);
+
+
+    /* 
+        * COULEURS AUXILIARES
+    */
+
+    --smokey-black: hsl(0, 0%, 7%);
+    --eerie-black: hsl(0, 0%, 9%);
+    --radical-red: hsl(346, 100%, 58%);
+    --white_a9: hsla(0, 0%, 100%, 0.09);
+    --white_a15: hsla(0, 0%, 100%, 0.15);
+    --white_a25: hsla(0, 0%, 100%, 0.25);
+    --white_a50: hsla(0, 0%, 100%, 0.5);
+    --white_a70: hsla(0, 0%, 100%, 0.7);
+    --white_a75: hsla(0, 0%, 100%, 0.75);
+    --white_a80: hsla(0, 0%, 100%, 0.8);
+    --jet-1: hsl(0, 0%, 20%);
+    --jet-2: hsl(0, 0%, 16%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+
+
+
+    /* 
+        * GRADIENT
+    */
+
+    --gradient-1: linear-gradient(180deg, transparent, var(--smokey-black));
+    --gradient-2: linear-gradient(180deg, var(--smokey-black) 25%, hsla(0, 0%, 0%, 0.6) 80%);
+
+    /* 
+        * TYPOGRAPIE
+    */
+
+    --ff-recoleta: "Recoleta", serif;
+    --ff-gordita: "Gordita", sans-serif;
+
+    /* 
+        * SIZES
+    */
+
+    --fs-1: 6rem;
+    --fs-2: 5rem;
+    --fs-3: 4rem;
+    --fs-4: 3rem;
+    --fs-5: 2rem;
+    --fs-7: 2rem;
+    --fs-8: 1rem;
+
+    /* 
+        * WEIGHT
+    */
+
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+
+    /* 
+        * SHADOW 
+    */
+    --shadow: 0 12px 30px -10px hsla( 0 ,0%, 14%, 0.1);
+
+
+    /* 
+        * SPACING
+    */
+
+    --section-padding :60px;
+
+    /* 
+        * BORDER RADIUS
+    */
+
+    --radius-circle: 50%;
+    --radius-5: 5px;
+    --radius-25: 25px;
+}
+
+/* 
+    * RESTE CSS
+*/
+
+*,
+*::before,
+*::after
+{
+    margin: 0; 
+    padding:0;
+    box-sizing:border-box;  
+}
+
+li{
+    list-style: none;
+}
+
+a,img span,button,ion-icon{
+display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    height: auto;
+}
+
+button{
+    background: none;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+html{
+    font-family: var(--ff-gordita);
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background: var(--smokey-black);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: var(--fw-400);
+    line-height: 2.15;
+    overflow-x: hidden;
+    height: 300vh;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-track{
+    background: var(--white);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--jet-2);
+}
+
