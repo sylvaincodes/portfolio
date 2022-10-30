@@ -15,7 +15,7 @@
     <!-- 
         - Favicons
      -->
-     <link rel="shortcut icon" href="./assets/images/favicon.svg" type="image/x-icon">
+     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
 
     <!-- 
         - CSS 
@@ -28,10 +28,83 @@
      -->
     <link rel="stylesheet" href="./assets/fonts/font.css">
 
+     <!-- 
+        - Remix icons
+      -->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
 </head>
-<body>
+<body class="active">
+
+    <!-- 
+        - PRELOADER
+     -->
+     <div class="loading" data-loading>
+        <img src="./assets/images/icons/loading _black.png" width="55" height="55" alt="chargement" class="img">
+        <img src="./assets/images/icons/loading-circle.svg" width="55" height="55" alt="chargement" class="circle">
+     </div>
     
+
+     <!-- 
+        - HEADER
+      -->
+
+      <header class="header active">
+        
+            <div class="container flexitem justify-content-between align-item-center">
+                <a href="#" class="logo">
+                    <img src="./assets/images/icons/logo.png" alt="logo" width="40" height="40">
+                </a>
+
+                <button data-nav-toggler aria-label="ouvrir le menu" class="nav-open-btn">
+                    <img  src="./assets/images/icons/menu.svg" width="17" height="17" alt="menu">
+                </button>
+
+                <nav class="navbar" data-navbar>
+                    <div class="navbar-top flexitem justify-content-between align-item-center">
+                        <a href="#" class="logo">
+                            <img src="./assets/images/icons/logo.png" alt="logo" width="40" height="40">
+                            
+                        </a>
+                        
+                        <i data-nav-toggler class="nav-close-btn ri-close-line"></i>
+                        
+                    </div>
+                    
+                    <ul class="navbar-list">
+                        <li class="navbar-item">
+                            <a data-navbar-link class="navbar-link" href="#home">Acceuil</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a data-navbar-link class="navbar-link" href="#projets">Projets</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a data-navbar-link class="navbar-link" href="#projets">Contact</a>
+                        </li>
+                    </ul>
+
+                    <button class="login-btn">
+                        <i class="ri-user-line"></i>
+                        <span class="span">Connexion</span>
+                    </button>
+
+                    <p class="navbar-title">Mon adresse</p>
+                    <address class="navbar-text">
+                        Bénin,Cotonou  Fidjrossè
+                    </address>
+                    <p class="navbar-text"> Pour des urgences contactez le
+                        <a class="contact-link" href="tel:+22991201430">+229 91 20 14 30</a>
+                        </p>
+                </nav>
+                
+                <div class="overlay">
+                    
+                </div>
+                
+            </div>
+            
+      </header>
+
 
 
 
