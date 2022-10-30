@@ -4,272 +4,384 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Adande Sylvain</title>
+    <title>Sylvain adande - Portfolio</title>
 
     <!-- 
-        Insert font 
+        - Meta tag primaire
     -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <meta name="title" content="Adande sylvain">
+    <meta name="description" content="Ma page de présentation portfolio en ligne ">
+
     <!-- 
-        Insert CSS 
-    -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+        - Favicons
+     -->
+     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+
+    <!-- 
+        - CSS 
+     -->
+     <link rel="stylesheet" href="./assets/css/landing.css">
+
+
+    <!-- 
+        - FONT
+     -->
+    <link rel="stylesheet" href="./assets/fonts/font.css">
+
+     <!-- 
+        - Remix icons
+      -->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
 </head>
-<body>
-        <div class="overlay" data-overlay></div>
+<body class="active">
 
-        <header>
+    <!-- 
+        - PRELOADER
+     -->
+     <div class="loading" data-loading>
+        <img src="./assets/images/icons/loading _black.png" width="55" height="55" alt="chargement" class="img">
+        <img src="./assets/images/icons/loading-circle.svg" width="55" height="55" alt="chargement" class="circle">
+     </div>
+    
 
-            <section class="header-top">
-                <div class="container">
-                    <h1 class="logo-header">
-                        <span class="letter">p</span>
-                        <span class="letter">o</span>
-                        <span class="letter">r</span>
-                        <span class="letter">t</span>
-                        <span class="letter">f</span>
-                        <span class="letter">o</span>
-                        <span class="letter">l</span>
-                        <span class="letter">i</span>
-                        <span class="letter">o</span>
-                    </h1>
+     <!-- 
+        - HEADER
+      -->
 
-                    <div class="search-container-input">
-                            <input type="text" class="search-field" id="search-field" placeholder="" data-search-input>
-                            <ion-icon class="search-icon" name="search-outline" data-search-icon></ion-icon>
-                    </div>
-                </div>
-            </section>
-            <section class="mobile-search">
-                <div class="container">
-                        <div class="mobile-search-container-input">
-                            <input type="text" class="search-field" id="search-field" placeholder="Recherche" data-search-input>
-                            <ion-icon class="search-icon" name="search-outline" data-search-icon></ion-icon>
-                        </div>
-                          <button aria-label="Ouvrir le menu" class="nav-open-btn" aria-label="open menu" data-nav-toggler-fixed>
-                                <span class="line line-1"></span>
-                                <span class="line line-2"></span>
-                                <span class="line line-3"></span>
-                         </button>
-                    </div>
-            </section>
-            <nav class="header-main">
-                <div class="container">
-                    <ul class="nav-menu-top">
-                        <li class="nav-menu-item">
-                            <a href="#" class="nav-link active">acceuil</a>
-                        </li>
-                        <li class="nav-menu-item">
-                            <a href="#" class="nav-link">blog</a>
-                        </li>
-                        <li class="nav-menu-item">
-                            <a href="#" class="nav-link">contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-
-        <main>
-            <section class="left-sidebar">
-                <div class="container">
-                    <ul class="left-sidebar-list">
-                            
-                        <li class="left-sidebar-item" id="left-sidebar-item-web">
-                            <div class="sidebar-card" data-sidebar-card-web>
-                                <ion-icon id="tv-outline" class="tv-outline" name="tv-outline" data-tv-outline></ion-icon>
-                                <div class="sidebar-card-content">  
-                                    <h1 class="sidebar-title" id="sidebar-title-web">projets web </h1>
-                                    <p class="sidebar-text">
-                                        <span>html</span>
-                                        <span>css</span>
-                                        <span>javascript</span>
-                                        <span>php</span>
-                                        <span>laravel</span>
-                                        <span>react js</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        
-
-                        <li class="left-sidebar-item" id="left-sidebar-item-mobile">
-                            <div class="sidebar-card" id="data-sidebar-card-mobile" data-sidebar-card-mobile>
-                                <ion-icon id="terminal-outline" class="sidebar-icon" name="terminal-outline" data-search-icon></ion-icon>
-                                <div class="sidebar-card-content">  
-                                    <h1 class="sidebar-title" id="sidebar-title-mobile">projets mobile </h1>
-                                    <p class="sidebar-text">
-                                        <span>react native</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-
-                </div>
-
-                  <ul class="sub-list" data-sub-list-web id="data-sub-list-web">
-                        <li class="sub-item"> <a href="./web/html_css_javascript.html">  html - css - javascript </a> </li>
-                        <li class="sub-item"><a href="./web/react_js_jsx_es6_redux.html"> react js - jsx - ES6 - redux</a> </li>
-                        <li class="sub-item"><a href="#"> react js - node js - mongo db</a> </li>
-                        <li class="sub-item"><a href="./web/laravel_php_mysql.html"> php - laravel - mysql </a> </li>
-                        <li class="sub-item"><a href="#"> php - slim - postgres </a> </li>
-                    </ul>
-
-                    <ul class="sub-list" id="data-sub-list-mobile" data-sub-list-mobile>
-                        <li class="sub-item">react native</li>
-                    </ul>
-            </section>
-
-            <section class="right-sidebar">
-                <div class="container">
-                    <ul class="right-sidebar-list">
-                        <li class="left-sidebar-item">
-                            <div class="sidebar-card">
-                                <div class="sidebar-card-content">  
-                                    <h1 class="sidebar-title"> projets jeux video </h1>
-                                    <p class="sidebar-text">
-                                        <span>unreal engine</span>
-                                    </p>
-                                </div>
-                                <ion-icon class="logo-xbox" name="logo-xbox" data-search-icon></ion-icon>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="mobile-sidebar">
-                <div class="container">
-                    <ul class="left-sidebar-list">
-                            
-                        <li class="left-sidebar-item" id="left-sidebar-item-web-570">
-                            <div class="sidebar-card" data-sidebar-card-web-570>
-                                <ion-icon id="tv-outline-570" class="tv-outline" name="tv-outline" data-tv-outline></ion-icon>
-                                <div class="sidebar-card-content">  
-                                    <h1 class="sidebar-title" id="sidebar-title-web-570">projets web </h1>
-                                    <p class="sidebar-text">
-                                        <span>html</span>
-                                        <span>css</span>
-                                        <span>javascript</span>
-                                        <span>php</span>
-                                        <span>laravel</span>
-                                        <span>react js</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-
-                        <ul class="sub-list" data-sub-list-web-570 id="data-sub-list-web">
-                            <li class="sub-item"> <a href="./web/html_css_javascript.html">  html - css - javascript </a> </li>
-                            <li class="sub-item"><a href="#"> html - css - react js </a> </li>
-                            <li class="sub-item"><a href="#"> html - css - ajax - jquery - php - laravel - mysql </a> </li>
-                            <li class="sub-item"><a href="#"> html - css - react js - node js </a> </li>
-                        </ul>
-
-                        <li class="left-sidebar-item" id="left-sidebar-item-mobile-570">
-                            <div class="sidebar-card" id="data-sidebar-card-mobile-570" data-sidebar-card-mobile-570>
-                                <ion-icon id="terminal-outline-570" class="sidebar-icon" name="terminal-outline" data-search-icon></ion-icon>
-                                <div class="sidebar-card-content">  
-                                    <h1 class="sidebar-title" id="sidebar-title-mobile-570" >projets mobile </h1>
-                                    <p class="sidebar-text">
-                                        <span>react native</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <ul class="sub-list" id="data-sub-list-mobile" data-sub-list-mobile-570>
-                            <li class="sub-item">html - css - react native</li>
-                        </ul>
-
-                        <li class="left-sidebar-item" id="left-sidebar-item-game-570">
-                            <div class="sidebar-card" id="data-sidebar-card-mobile" data-sidebar-card-mobile>
-                                <ion-icon id="terminal-outline" class="sidebar-icon" name="logo-xbox" data-search-icon></ion-icon>
-                                <div class="sidebar-card-content">  
-                                    <h1 class="sidebar-title">projets jeux vidéos </h1>
-                                    <p class="sidebar-text">
-                                        <span>unreal engine</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-                        <ul class="sub-list" id="data-sub-list-game" data-sub-list-game>
-                            <li class="sub-item">unreal engine</li>
-                        </ul>
-                    </ul>
-
-                </div>
-
-            </section>
-        </main>
+      <header class="header active">
         
-        <footer>
-            <section class="container">
-    
-                        <button class="logo-footer youtube">
-                            <a target="__blank" href="https://www.youtube.com/channel/UCmPmOdDw941pdi8YmIPjyEA">
-                            <ion-icon class="search-logo red" name="logo-youtube" data-search-icon></ion-icon>
-                                 <span>youtube</span> 
-                            </a>
-                        </button>
-                        <button class="logo-footer">
-                            <a target="__blank" href="https://www.youtube.com/channel/UCmPmOdDw941pdi8YmIPjyEA">
-                                <ion-icon class="search-logo blue" name="logo-twitter" data-search-icon></ion-icon>
-                                 <span>twitter</span> 
-                            </a>
-                        </button>
-                        <button class="logo-footer">
-                             <a target="__blank" href=" https://github.com/sylvaincodes">
-                                <ion-icon class="search-logo gris" name="logo-github" data-search-icon></ion-icon>
-                                <span>github</span> 
-                            </a>
-                        </button> 
-                        <button class="logo-footer">
-                             <a target="__blank" href=" https://linkedin.com/in/sylvain-olympio-adande">
-                                <ion-icon class="search-logo gris" name="logo-linkedin" data-search-icon></ion-icon>
-                                <span>linkedin</span> 
-                            </a>
-                        </button>
-    
-            </section>
-        </footer>
+            <div class="container flexitem justify-content-between align-item-center">
+                <a href="#" class="logo">
+                    <img src="./assets/images/icons/logo.png" alt="logo" width="40" height="40">
+                </a>
 
-        <!-- Menu mobile-->
-        <div class="mobile-menu" data-mobile-menu>
-            <div class="mobile-menu-title-container">
-                <h1 class="mobile-menu-title">Portfolio</h1>
-                <ion-icon name="close-outline" data-close-menu aria-label="Fermer"/>
+                <button data-nav-toggler aria-label="ouvrir le menu" class="nav-open-btn">
+                    <img  src="./assets/images/icons/menu.svg" width="17" height="17" alt="menu">
+                </button>
+
+                <nav class="navbar" data-navbar>
+                    <div class="navbar-top flexitem justify-content-between align-item-center">
+                        <a href="#" class="logo">
+                            <img src="./assets/images/icons/logo.png" alt="logo" width="40" height="40">
+                            
+                        </a>
+                        
+                        <i data-nav-toggler class="nav-close-btn ri-close-line"></i>
+                        
+                    </div>
+                    
+                    <ul class="navbar-list">
+                        <li class="navbar-item">
+                            <a data-navbar-link class="navbar-link" href="#home">Acceuil</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a data-navbar-link class="navbar-link" href="#projets">Projets</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a data-navbar-link class="navbar-link" href="#projets">Contact</a>
+                        </li>
+                    </ul>
+
+                    <button class="login-btn">
+                        <i class="ri-user-line"></i>
+                        <span class="span">Connexion</span>
+                    </button>
+
+                    <p class="navbar-title">Mon adresse</p>
+                    <address class="navbar-text">
+                        Bénin,Cotonou  Fidjrossè
+                    </address>
+                    <p class="navbar-text"> Pour des urgences contactez le
+                        <a class="contact-link" href="tel:+22991201430">+229 91 20 14 30</a>
+                        </p>
+                </nav>
+                
+                <div class="overlay">
+                    
+                </div>
+                
             </div>
-
-            <nav class="mobile-menu-navigation">
-                <ul class="menu-top-list">
-                    <li class="menu-top-list-item">
-                        <a href="#" class="list-item-url">Acceuil</a>
-                    </li><li class="menu-top-list-item">
-                        <a href="#" class="list-item-url">Blog</a>
-                    </li><li class="menu-top-list-item">
-                        <a href="#" class="list-item-url">Contact</a>
-                    </li>
-                </ul>
-            </nav>
             
-        </div>
-
-        <!--
-            - custom js link
-        -->
-        <script src="./assets/js/script.js"></script>
-
-        <!--
-            - ionicon link
-        -->
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      </header>
 
 
+      <main>
+        <article>
+
+            <!-- 
+                - HERO
+             -->
+
+            <section class="section hero" aria-label="home">
+
+                <div class="container">
+
+                    <img class="image" src="./assets/images/photo.jpg" alt="mo photo">
+                    
+                    <div class="hero-content">
+                            <h1>Adande Sylvain</h1>
+                            <div class="wrapper h2">
+                                <strong class="strong" data-letter-effect >Développeur</strong>
+                                <strong class="strong" data-letter-effect >Front-End</strong>
+                                <strong class="strong" data-letter-effect >REACT JS</strong>
+                            </div>            
+                            <p class="hero-text"> + 2 ans d'expérience</p>
+                    </div>
+
+                    <img src="./assets/images/icons/about-shape-3.svg" alt="" class="shape">
+                    
+                    <a href="#" class="scroll-down">
+                        <img src="./assets/images/icons/scroll-down.svg" height="66" width="40" alt="mouse scroll">
+                    </a>
+
+                </div>
+
+
+                
+            </section>
+
+            <!-- 
+                - PROJETS
+             -->
+             <section class="section projet">
+                <div class="container">
+                    <ul class="projet-list">
+
+                        <li class="projet-item">
+                            
+                            <div class="projet-card">
+                                <figure class="img-holder">
+                                    <img width="330" height="625" class="img-cover"  src="./assets/images/design_bulbiere/psg_white.png" alt="projet ecommerce full">
+                                </figure>
+
+                                <div class="card-content">
+                                    <h3 class="h6">
+                                        <a href="#" class="card-title">Full Ecommerce</a>
+                                    </h3>
+
+                                    <span class="card-tag">Html , Css , Javascript</span>
+                                </div>
+
+                                <a href="#" class="btn-icon">
+                                    <img  src="./assets/images/icons/arrow-forward.svg" width="43" height="20" alt="arrow">
+                                </a>
+                            </div>  
+                            
+                            <div class="projet-card">
+                                <figure>
+                                    <img width="330" height="625" class="img-cover"  src="./assets/images/design_bulbiere/psd_white_2.png" alt="projet ecommerce full">
+                                </figure>
+
+                                <div class="card-content">
+                                    <h3 class="h6">
+                                        <a href="#" class="card-title">Full Ecommerce</a>
+                                    </h3>
+
+                                    <span class="card-tag">Html , Css , Javascript</span>
+                                </div>
+
+                                <a href="https://sylvaincodes.github.io/bulbiere" class="btn-icon">
+                                    <img src="./assets/images/icons/arrow-forward.svg" width="43" height="20" alt="arrow">
+                                </a>
+                            </div>
+
+                        </li>  
+                        
+                        
+                        <li class="projet-item">
+                            
+                            <div class="projet-card">
+                                <figure class="img-holder">
+                                    <img width="330" height="625" class="img-cover"  src="./assets/images/design_spotify/psd_white.png" alt="projet ecommerce full">
+                                </figure>
+
+                                <div class="card-content">
+                                    <h3 class="h6">
+                                        <a href="#" class="card-title">Streaming music</a>
+                                    </h3>
+
+                                    <span class="card-tag">Html , Css , Javascript</span>
+                                </div>
+
+                                <a href="https://sylvaincodes.github.io/spotify" class="btn-icon">
+                                    <img  src="./assets/images/icons/arrow-forward.svg" width="43" height="20" alt="arrow">
+                                </a>
+                            </div>  
+                            
+                            <div class="projet-card">
+                                <figure>
+                                    <img width="330" height="625" class="img-cover"  src="./assets/images/design_spotify/psd_white.png" alt="projet ecommerce full">
+                                </figure>
+
+                                <div class="card-content">
+                                    <h3 class="h6">
+                                        <a href="#" class="card-title">Streaming Music</a>
+                                    </h3>
+
+                                    <span class="card-tag">Html , Css , Javascript</span>
+                                </div>
+
+                                <a href="#" class="btn-icon">
+                                    <img src="./assets/images/icons/arrow-forward.svg" width="43" height="20" alt="arrow">
+                                </a>
+                            </div>
+
+                        </li>  
+                        
+                        <li class="projet-item">
+                            
+                            <div class="projet-card">
+                                <figure class="img-holder">
+                                    <img width="330" height="625" class="img-cover"  src="./assets/images/design_shopify/psd_white.png" alt="projet ecommerce full">
+                                </figure>
+
+                                <div class="card-content">
+                                    <h3 class="h6">
+                                        <a href="#" class="card-title">Ecommerce</a>
+                                    </h3>
+
+                                    <span class="card-tag">React Js , Redux ,Stripe</span>
+                                </div>
+
+                                <a href="https://shopifyclient-1922b.web.app/" class="btn-icon">
+                                    <img  src="./assets/images/icons/arrow-forward.svg" width="43" height="20" alt="arrow">
+                                </a>
+                            </div>  
+                            
+                            <div class="projet-card">
+                                <figure>
+                                    <img width="330" height="625" class="img-cover"  src="./assets/images/design_shopify/psd_white_2.png" alt="projet ecommerce full">
+                                </figure>
+
+                                <div class="card-content">
+                                    <h3 class="h6">
+                                        <a href="#" class="card-title">Ecommerce</a>
+                                    </h3>
+
+                                    <span class="card-tag">React js , Redux , Stripe</span>
+                                </div>
+
+                                <a href="#" class="btn-icon">
+                                    <img src="./assets/images/icons/arrow-forward.svg" width="43" height="20" alt="arrow">
+                                </a>
+                            </div>
+
+                        </li> 
+
+                    </ul>
+
+                    <!-- <img src="./assets/images/icons/projet-shape.svg" width="220" height="78" alt="lazy"> -->
+                </div>
+             </section>
+
+             <section class="section category" aria-label="Catégorie des projets">
+                    <div class="container">
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <a href="#" class="category-card">
+                                    <h3 class="card-title">web,</h3>
+
+                                    <figure class="img-holder card-banner has-before">
+                                        <img src="./assets/images/cat_1.jpg" alt="site web catégorie" class="img-cover">
+                                    </figure>
+                                </a>
+                            </li> <li class="category-item">
+                                <a href="#" class="category-card">
+                                    <h3 class="card-title">mobile,</h3>
+
+                                    <figure class="img-holder card-banner has-before">
+                                        <img src="./assets/images/cat_2.jpg" alt="application mobile catégorie" class="img-cover">
+                                    </figure>
+                                </a>
+                            </li><li class="category-item">
+                                <a href="#" class="category-card">
+                                    <h3 class="card-title">game,</h3>
+
+                                    <figure class="img-holder card-banner has-before">
+                                        <img src="./assets/images/cat_3.jpg" alt="jeux vidéos catégorie" class="img-cover">
+                                    </figure>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+             </section>
+
+             <section class="section about" id="about" aria-label="A propos de moi">
+                <div class="container">
+                    <div class="about-content">
+                        <h2 class="section-title">
+                            Salut. Je suis <br>
+                            Adande Sylvain
+                        </h2>
+
+                        <div class="wrapper has-before">
+
+                            <p class="section-text">
+
+                                Un <em>Développeur</em> passionné qui travaille dans le développement web depuis plus de <em>
+                                    2 ans. 
+                                </em>    <br>
+                                Je suis prêt pour te donner le meilleur de moi même. 
+                            </p>
+
+                            <img src="./assets/images/icons/signature.png" alt="image">
+
+                        </div>
+
+                    </div>
+
+                    <figure class="about-banner">
+                        <div class="img-holder has-before">
+                            <img src="./assets/images/photo_2.jpg" alt="moi" width="512" height="512" class="img-cover">
+                        </div>
+                    </figure>
+
+                    <img src="./assets/images/icons/about-shape-3.svg" alt="" class="shape shape-3">
+                </div>
+             </section>
+
+
+             <footer class="footer">
+                <div class="section footer-top">
+                    <div class="container">
+                        
+                        <p class="section-subtitle">Contact</p>
+                        <h2 class="section-title">Opportunités de travaille ? Envoyez un texto</h2>
+
+                        <a class="btn-icon" href="#">
+                            <img src="./assets/images/icons/arrow-forward.svg" alt="lazy" width="43" height="20">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <ul class="social-links">
+                        <li><a href="https://wa.me/+22996178385"> <i class="ri-whatsapp-fill"></i> </a></li>
+                        <li><a href="https://linkedin.com/in/sylvain-olympio-adande"> <i class="ri-linkedin-fill"></i> </a></li>
+                        <li><a href="https://github.com/sylvaincodes"> <i class="ri-github-fill"></i> </a></li>
+                        <li><a href="https://www.youtube.com/channel/UCmPmOdDw941pdi8YmIPjyEA"> <i class="ri-youtube-fill"></i> </a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-bg has-before">
+                    <img src="./assets/images/icons/work.jpg" class="img-cover" alt="">
+                </div>
+            </footer>
+
+        </article>
+
+
+      </main>
+
+
+
+
+
+
+    <!-- 
+        - JS
+     -->
+    <script src="./assets/js/landing.js"></script>
 </body>
 </html>
