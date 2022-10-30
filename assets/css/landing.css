@@ -17,9 +17,9 @@
         * COULEURS PRINCIPALES
     */
 
-    --first-color: orange;
-    --second-color: blue;
-    --third-color: rgb(133, 218, 23);
+    --first-color: #F6F6C9;
+    --second-color: #FF6464;
+    --third-color: #B3FFAE;
 
 
     /* 
@@ -88,6 +88,8 @@
     */
 
     --section-padding: 60px;
+    --width : 1;
+    --height : 1;
 
     /* 
         * BORDER RADIUS
@@ -253,6 +255,71 @@ body {
     align-items: flex-start;
 }
 
+.shape{display: none;}
+
+
+H1,h2,h3,h4,h5,h6{
+    line-height: 1.2;
+    font-family: var(--ff-recoleta);
+}
+
+h1{
+    font-size: var(--fs-1);
+}
+
+h2{
+    font-size: var(--fs-2);
+}
+h3{
+    font-size: var(--fs-3);
+}
+h4{
+    font-size: var(--fs-4);
+}
+h5{
+    font-size: var(--fs-5);
+}
+h6{
+    font-size: var(--fs-6);
+}
+
+.img-holder{
+    aspect-ratio: 1/1;
+    background: var(--jet-1);
+}
+
+.has-before{
+    position: relative;
+    z-index: 1;
+}
+
+.has-before::before{
+    content: '';
+    position: absolute;
+}
+
+.img-holder.has-before::before{
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-1);
+}
+
+.img-cover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn-icon{
+    background: var(--bg-color, var(--white));
+    border-radius: var(--radius-circle);
+    display: grid;
+    place-content: center;
+    transition: var(--transition-2);
+}
+
 
 /*-------------------
     - HEADER
@@ -390,3 +457,227 @@ body {
     text-decoration: underline;
 }
 
+/* ----------------------------
+    - MAIN HERO
+----------------------------- */
+
+.hero{
+    padding-block-start: 80px;
+    text-align: center;
+}
+
+.hero img{
+    width: 200px;
+    height: 200px;
+    border-radius: var(--radius-circle);
+    position: relative;
+    border-color: var(--radical-red);
+    border: 5px solid ;
+}
+
+.hero h1{
+  letter-spacing: 5px;
+  font-size: var(--fs-4);
+}
+
+.hero .wrapper{
+    position: relative;
+    margin-block: 10px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero .wrapper .space{
+    padding: 0.1em;
+}
+
+
+.hero .wrapper :is(.in,.out){
+    opacity: 0;
+    transform: scaleY(0);
+}
+
+
+.hero .wrapper .out{
+    opacity: 1;
+    transform: scaleY(1);
+    animation: textWave .2s ease reverse forwards;
+}
+
+
+.hero .wrapper .in{
+    opacity: 1;
+    transform: scaleY(1);
+    animation: textWave .2s ease forwards;
+}
+
+@keyframes textWave {
+    0%{
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+.hero .wrapper .strong{
+    position: absolute;
+    top: 0;
+    font-weight: inherit;
+    font-size: var(--fs-2);
+    display: flex;
+    text-align: center;
+}
+
+.hero .wrapper .strong:nth-child(1){
+   color: var(--first-color);
+}
+
+.hero .wrapper .strong:nth-child(2){
+    color: var(--second-color);
+}
+
+.hero .wrapper .strong:nth-child(3){
+    color: var(--third-color);
+}
+
+.hero  .hero-text{
+    font-size: var(--fs-5);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: var(--fw-500);
+    padding-block-start: 100px;
+}
+
+.hero .wrapper .space{
+    padding: 0.1em;
+} 
+
+
+/*----------------------
+    - PROJETS 
+---------------------- */
+.projet{
+    padding-block: 50px;
+}
+
+.projet-list{
+    display: grid;
+    gap: 30px;
+}
+
+.projet-item, .projet-card{
+    position: relative;
+}
+
+.projet-card :is(.card-content, .btn-icon){
+    position: absolute;
+    z-index: 1;
+}
+
+.projet-card .card-content{
+    width: 100%;
+    padding: 30px 12px;
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.projet-card .card-title{
+    color: var(--black);
+    font-size: var(--fs-5);
+    font-weight: var(--fw-500);
+    top:20px;
+    left: 80px;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.projet-card .card-tag{
+    color: var(--black);
+    font-size: var(--fs-5);
+    font-weight: var(--fw-500);
+    top:260px;
+    position: absolute;
+    left: 60px;
+}
+
+.projet-card .btn-icon{
+    top: 0;
+    right: 0;
+    height: 50px;
+    border-radius: 0 0 0 var(--radius-25);
+}
+
+.projet-card .btn-icon img{
+    transform: rotate(-45deg);
+    padding: 10px;    
+}
+
+.projet-card .btn-icon:is(:hover,:focus-visible){
+    border-bottom-left-radius: var(--radius-5);
+}
+
+.projet-card{
+    animation: changeCard 11s linear infinite;
+}
+
+
+@keyframes changeCard {
+    0%, 55%,100%{
+        opacity: 0;
+        visibility:hidden;
+    }
+
+    5%,50%{
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.projet-item .projet-card:last-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    animation-delay: 3s;
+}
+
+
+.projet .scroll-down{
+    display: grid;
+    border: 1px solid var(--white_a15);
+    border-radius: var(--radius-circle);
+    margin-inline: auto;
+    place-content: center;
+    margin-block-start: 55px;
+    width: 60px;
+    height: 60px;
+    transition: var(--transition-2);
+    animation: scrollDown 1.5s linear infinite alternate;
+}
+
+.projet .scroll-down img{
+    width: 22px;
+}
+
+.projet .scroll-down:is(:hover,:focus-visible){
+    background-color: var(--second-color);
+    border-color: var(--second-color);
+}
+
+
+@keyframes scrollDown {
+    from {
+        transform: translateY(-12px);
+    }
+    to{
+        transform: translateY(12px);
+    }
+}
