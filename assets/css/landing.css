@@ -557,15 +557,15 @@ h6{
 }
 
 .hero .wrapper .strong:nth-child(1){
-   color: var(--first-color);
+   /* color: var(--first-color); */
 }
 
 .hero .wrapper .strong:nth-child(2){
-    color: var(--second-color);
+    /* color: var(--second-color); */
 }
 
 .hero .wrapper .strong:nth-child(3){
-    color: var(--third-color);
+    /* color: var(--third-color); */
 }
 
 .hero  .hero-text{
@@ -1076,6 +1076,10 @@ h6{
         margin-inline: auto;        
     }
 
+    html{
+        font-size: 15px;
+    }
+
 
     /* 
         - ABOUT
@@ -1085,4 +1089,75 @@ h6{
         max-width: 500px;
         margin-inline:auto;
     }
+
+    /* --------------
+        -   HERO
+    ---------------- */
+    .hero {
+        padding-block-start: 150px;
+    }
+
+    .hero .container {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .hero .container  .image{
+        position: absolute;
+        right: 0;
+        top: 10%;
+        left: 70%;
+        max-width: 200px;
+        z-index: -1;
+    }
+
+    .hero-content h1{
+        text-align: left;
+        font-size: var(--fs-2);
+    }
+
+    .hero .wrapper{
+         margin-block: -5px 100px;
+    }
+
+    /* ----------------------
+        - PROJETS
+    ----------------------- */
+
+    .projet-list{
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 20px;
+    }    
+    
+    .projet-list .card-title{
+        font-size: 1.5rem;
+    }  
+    
+    .projet-list .card-tag{
+        font-size: 1.4rem;
+        top: 240px;
+    }
+
+
+    .about .container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about .section-text{
+        font-size: 1.2rem;
+    }
+
+    .about .about-content{
+        order: 1;
+    }
+
+    .back-top-btn{
+        width: 100px;
+        height: 100px;
+    }
+
+    .projet-item:nth-child(even){
+        margin-block-start: 100px;
+    }
+
 }
