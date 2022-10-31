@@ -124,3 +124,45 @@ const setLetterEffect = function () {
 
 window.addEventListener('load', setLetterEffect); 
 
+
+// Confirm go to page recruter
+function Confirmation() {
+    var answer = confirm("Attention cette page est réservée aux personnes techniques");
+}
+
+// BACK TO TOP
+const backToTop = document.querySelector("[data-back-top-btn]");
+
+window.addEventListener('scroll', function (){
+    const bodyHeight= document.body.scrollHeight;// scroller de haut jusque au bas
+    const windowHeight = window.innerHeight;
+    const scrollEndPos = bodyHeight - windowHeight;
+    const totalScrollPerCent = ( window.scrollY/scrollEndPos)*100;
+
+    backToTop.textContent = (totalScrollPerCent.toFixed(0))/1+'%';
+
+    if (totalScrollPerCent > 5) {
+        backToTop.classList.add('show');
+    }else{
+        backToTop.classList.remove  ('show');
+    }
+
+})
+
+// SCROLL REVEALD
+const revealElements = document.querySelectorAll("[data-reveal]");
+const scrollReveal = function () {
+    for (let index = 0; index < revealElements.length; index++) {
+        const elementIsInScreen = revealElements[index].getBoundingClientRect().top < window.innerHeight /1.15;
+
+        if (elementIsInScreen) {
+            revealElements[index].classList.add("revealed")
+        }
+        else{
+            revealElements[index].classList.remove("revealed");
+        }
+        
+    }
+}
+window.addEventListener('scroll', scrollReveal);
+scrollReveal();

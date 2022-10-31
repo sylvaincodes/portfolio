@@ -33,8 +33,15 @@
       -->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
+
+      <!-- 
+            -    PRELOAD
+       -->
+       <link rel="preload" as="image" href="./assets/images/icons/loading_black.png" width="55" height="55">
+       <link rel="preload" as="image" href="./assets/images/icons/loading-circle.svg"  width="70" height="70">
+
 </head>
-<body class="active">
+<body class="active" id="top">
 
     <!-- 
         - PRELOADER
@@ -83,10 +90,10 @@
                         </li>
                     </ul>
 
-                    <button class="login-btn">
+                    <a onclick="Confirmation();" href="./recruteur.html" class="login-btn">
                         <i class="ri-user-line"></i>
-                        <span class="span">Connexion</span>
-                    </button>
+                        <span class="span">RECRUTEUR</span>
+                    </a>
 
                     <p class="navbar-title">Mon adresse</p>
                     <address class="navbar-text">
@@ -148,10 +155,10 @@
                 <div class="container">
                     <ul class="projet-list">
 
-                        <li class="projet-item">
+                        <li class="projet-item revealed" data-reveal>
                             
                             <div class="projet-card">
-                                <figure class="img-holder">
+                                <figure class="img-holder card-banner has-before">
                                     <img width="330" height="625" class="img-cover"  src="./assets/images/design_bulbiere/psg_white.png" alt="projet ecommerce full">
                                 </figure>
 
@@ -169,7 +176,7 @@
                             </div>  
                             
                             <div class="projet-card">
-                                <figure>
+                                <figure class="img-holder card-banner has-before">
                                     <img width="330" height="625" class="img-cover"  src="./assets/images/design_bulbiere/psd_white_2.png" alt="projet ecommerce full">
                                 </figure>
 
@@ -189,10 +196,10 @@
                         </li>  
                         
                         
-                        <li class="projet-item">
+                        <li class="projet-item" data-reveal >
                             
                             <div class="projet-card">
-                                <figure class="img-holder">
+                                <figure class="img-holder card-banner has-before">
                                     <img width="330" height="625" class="img-cover"  src="./assets/images/design_spotify/psd_white.png" alt="projet ecommerce full">
                                 </figure>
 
@@ -210,7 +217,7 @@
                             </div>  
                             
                             <div class="projet-card">
-                                <figure>
+                                <figure class="img-holder card-banner has-before">
                                     <img width="330" height="625" class="img-cover"  src="./assets/images/design_spotify/psd_white.png" alt="projet ecommerce full">
                                 </figure>
 
@@ -229,10 +236,10 @@
 
                         </li>  
                         
-                        <li class="projet-item">
+                        <li class="projet-item" data-reveal>
                             
                             <div class="projet-card">
-                                <figure class="img-holder">
+                                <figure class="img-holder card-banner has-before">
                                     <img width="330" height="625" class="img-cover"  src="./assets/images/design_shopify/psd_white.png" alt="projet ecommerce full">
                                 </figure>
 
@@ -250,7 +257,7 @@
                             </div>  
                             
                             <div class="projet-card">
-                                <figure>
+                                <figure class="img-holder card-banner has-before">
                                     <img width="330" height="625" class="img-cover"  src="./assets/images/design_shopify/psd_white_2.png" alt="projet ecommerce full">
                                 </figure>
 
@@ -271,14 +278,14 @@
 
                     </ul>
 
-                    <!-- <img src="./assets/images/icons/projet-shape.svg" width="220" height="78" alt="lazy"> -->
+                    <!-- <img src="./assets/images/icons/projet-shape.svg" width="220" height="78" alt="lazy">  -->
                 </div>
              </section>
 
              <section class="section category" aria-label="Catégorie des projets">
                     <div class="container">
                         <ul class="category-list">
-                            <li class="category-item">
+                            <li class="category-item" data-reveal>
                                 <a href="#" class="category-card">
                                     <h3 class="card-title">web,</h3>
 
@@ -286,7 +293,7 @@
                                         <img src="./assets/images/cat_1.jpg" alt="site web catégorie" class="img-cover">
                                     </figure>
                                 </a>
-                            </li> <li class="category-item">
+                            </li> <li class="category-item" data-reveal>
                                 <a href="#" class="category-card">
                                     <h3 class="card-title">mobile,</h3>
 
@@ -294,7 +301,7 @@
                                         <img src="./assets/images/cat_2.jpg" alt="application mobile catégorie" class="img-cover">
                                     </figure>
                                 </a>
-                            </li><li class="category-item">
+                            </li><li class="category-item" data-reveal>
                                 <a href="#" class="category-card">
                                     <h3 class="card-title">game,</h3>
 
@@ -310,14 +317,14 @@
              <section class="section about" id="about" aria-label="A propos de moi">
                 <div class="container">
                     <div class="about-content">
-                        <h2 class="section-title">
+                        <h2 class="section-title" data-reveal>
                             Salut. Je suis <br>
                             Adande Sylvain
                         </h2>
 
                         <div class="wrapper has-before">
 
-                            <p class="section-text">
+                            <p class="section-text" data-reveal>
 
                                 Un <em>Développeur</em> passionné qui travaille dans le développement web depuis plus de <em>
                                     2 ans. 
@@ -325,57 +332,63 @@
                                 Je suis prêt pour te donner le meilleur de moi même. 
                             </p>
 
-                            <img src="./assets/images/icons/signature.png" alt="image">
+                            <img src="./assets/images/icons/signature.png" alt="image" data-reveal>
 
                         </div>
 
                     </div>
 
-                    <figure class="about-banner">
+                    <figure class="about-banner" data-reveal>
                         <div class="img-holder has-before">
                             <img src="./assets/images/photo_2.jpg" alt="moi" width="512" height="512" class="img-cover">
                         </div>
                     </figure>
 
-                    <img src="./assets/images/icons/about-shape-3.svg" alt="" class="shape shape-3">
                 </div>
-             </section>
-
-
-             <footer class="footer">
-                <div class="section footer-top">
-                    <div class="container">
-                        
-                        <p class="section-subtitle">Contact</p>
-                        <h2 class="section-title">Opportunités de travaille ? Envoyez un texto</h2>
-
-                        <a class="btn-icon" href="#">
-                            <img src="./assets/images/icons/arrow-forward.svg" alt="lazy" width="43" height="20">
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-bottom">
-                    <ul class="social-links">
-                        <li><a href="https://wa.me/+22996178385"> <i class="ri-whatsapp-fill"></i> </a></li>
-                        <li><a href="https://linkedin.com/in/sylvain-olympio-adande"> <i class="ri-linkedin-fill"></i> </a></li>
-                        <li><a href="https://github.com/sylvaincodes"> <i class="ri-github-fill"></i> </a></li>
-                        <li><a href="https://www.youtube.com/channel/UCmPmOdDw941pdi8YmIPjyEA"> <i class="ri-youtube-fill"></i> </a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-bg has-before">
-                    <img src="./assets/images/icons/work.jpg" class="img-cover" alt="">
-                </div>
-            </footer>
+            </section>
+            <!-- <img src="./assets/images/icons/about-shape-3.svg" alt="" class="shape shape-3" data-reveal> -->
 
         </article>
 
+        <footer class="footer" >
+            <div class="section footer-top">
+                <div class="container">
+                    
+                    <p class="section-subtitle" data-reveal>Contact</p>
+                    <h2 class="section-title" data-reveal>Opportunités de travaille ? Envoyez un texto</h2>
+
+                    <a class="btn-icon" href="#">
+                        <img src="./assets/images/icons/arrow-forward.svg" alt="lazy" width="43" height="20">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <ul class="social-links">
+                    <li><a href="https://wa.me/+22996178385"> <i class="ri-whatsapp-fill"></i> </a></li>
+                    <li><a href="https://linkedin.com/in/sylvain-olympio-adande"> <i class="ri-linkedin-fill"></i> </a></li>
+                    <li><a href="https://github.com/sylvaincodes"> <i class="ri-github-fill"></i> </a></li>
+                    <li><a href="https://www.youtube.com/channel/UCmPmOdDw941pdi8YmIPjyEA"> <i class="ri-youtube-fill"></i> </a></li>
+                </ul>
+            </div>
+
+            <div class="footer-bg has-before">
+                <img src="./assets/images/icons/work.jpg" class="img-cover" alt="">
+            </div>
+        </footer>
 
       </main>
 
 
+      <!-- 
+            - BACK TO TOP
+       -->
+      <a href="#top" class="back-top-btn show" aria-label="retour en haut" data-back-top-btn>0%</a>
 
+      <!-- 
+            - CURSOR
+       -->
+      <div class="cursor" data-cursor></div>
 
 
 

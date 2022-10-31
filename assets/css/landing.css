@@ -321,6 +321,29 @@ h6{
 }
 
 
+/* -----------------------
+    - SCROLL REVEAL 
+------------------------- */
+[data-reveal]{
+    transform: translateY(50px);
+    opacity: 0;
+    transition: var(--transition-3);
+}
+
+[data-reveal="left"]{
+    transform: translate(-50px,0);
+}
+
+[data-reveal="right"]{
+    transform: translate(50px,0);
+}
+
+[data-reveal].revealed{
+    transform: translate(0,0);
+    opacity: 1;
+}
+
+
 /*-------------------
     - HEADER
 ------------------ */
@@ -592,7 +615,7 @@ h6{
     font-size: var(--fs-5);
     font-weight: var(--fw-500);
     top:20px;
-    left: 80px;
+    left: calc(50% - 90px);
     position: absolute;
     text-transform: uppercase;
 }
@@ -601,9 +624,9 @@ h6{
     color: var(--black);
     font-size: var(--fs-5);
     font-weight: var(--fw-500);
-    top:260px;
+    top:50px;
     position: absolute;
-    left: 60px;
+    left: calc(50% - 90px);
 }
 
 .projet-card .btn-icon{
@@ -623,7 +646,6 @@ h6{
 }
 
 .projet-card{
-    animation: changeCard 11s linear infinite;
 }
 
 
@@ -646,6 +668,7 @@ h6{
     width: 100%;
     opacity: 0;
     visibility: hidden;
+    animation: changeCard 3s linear infinite;
     animation-delay: 3s;
 }
 
@@ -734,6 +757,13 @@ h6{
 
 .about .section-title{
     margin-block-end: 35px;
+    transform: translateX(-50px);
+    font-size: var(--fs-4);
+}
+
+.about .section-title.revealed{
+    margin-block-end: 35px;
+    transform: translateX(0px);
 }
 
 .about .section-text{
@@ -742,6 +772,12 @@ h6{
     font-weight: var(--fw-300);
     line-height: 1.7;
     margin-block-end: 25px;
+    transform: translateX(-50px);
+}
+
+.about .section-text.revealed{
+    transform: translateX(0px);
+    transition-delay: 0.6s;
 }
 
 .about .wrapper::before{
@@ -752,6 +788,7 @@ h6{
     background-size: contain;
     height: 20px;
     width: 20px;
+    transition-delay: 0.7s;
 }
 
 .about .section-text em{
@@ -844,4 +881,208 @@ h6{
 }
 
 
+/* ------------------
+    - BACK TOP
+------------------- */
 
+.back-top-btn{
+    position: fixed;
+    bottom: 30px;
+    right: -70px;
+    width: 70px;
+    height: 70px;
+    border: 1px dashed var(--white);
+    color: var(--radical-red);
+    border-radius: var(--radius-circle);
+    display: grid;
+    place-items: center;
+    transition:  --transition-2;
+    z-index: 3;
+    font-size: var(--fs-5);
+    visibility: hidden;
+    box-shadow: var(--gradient-1) 10px 10px 10px inset;
+}
+
+.back-top-btn:hover{
+    color: var(--white);
+}
+
+.back-top-btn.show{
+    transform: translateX(-100px);
+    visibility: visible;
+    transition: transform 500ms ease;
+}
+
+/* ----------------------
+    - CUSTOM SURSOR
+----------------------- */
+.cursor{
+    display: none;
+}
+
+
+
+/* ---------------------
+    - MEDIA QUERY LARGER THAN 575
+----------------------*/
+
+@media (min-width: 575px) {
+    
+    /*---------------------
+        - CUSTOM PROPRETY
+    --------------------- */
+
+    :root{
+        
+
+        /* spacing */
+        --section-padding:80px
+
+
+    }
+
+    /* -----------------
+        - REUSED CSS
+    ------------------- */
+    /* REUSED CSS */
+    .container{
+        max-width: 540px;
+        width: 100%;
+        margin-inline: auto;        
+    }
+
+
+    /* -----------------
+        - HEADER
+    ------------------- */
+
+    .navbar{
+        max-width: 500px;
+    }
+
+    .navbar.active{
+        
+    }
+
+
+    /* --------------------
+        - PROJETS
+    --------------------- */
+    .projet-list{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+    
+    .projet-card .btn-icon{
+        transform-origin: top right;
+        transform: scale(0);
+    }
+
+    .projet-card:is(:hover,:focus-visible) .btn-icon{
+        transform: scale(1);
+    }
+
+    .projet-card :is(.card-title,.card-tag){
+        opacity: 0;
+        transform: translateY(10px);
+        transition: var(--transition-2);
+    }   
+    
+    .projet-card .card-tag{
+        top: 200px;
+    }  
+
+    .projet-card:is(:hover,:focus-visible) :is(.card-title,.card-tag){
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+
+    
+    .projet-card .card-tag{
+         transition-delay: 0.1s;
+    }
+
+
+}
+
+
+/* ---------------------
+    - MEDIA QUERY LARGER THAN 768
+----------------------*/
+
+@media (min-width: 769px) {
+    
+    /*---------------------
+        - CUSTOM PROPRETY
+    --------------------- */
+
+    :root{
+        
+
+        /* spacing */
+        --section-padding:80px
+
+
+    }
+
+    /* -----------------
+        - REUSED CSS
+    ------------------- */
+    /* REUSED CSS */
+    .container{
+        max-width: 720px;
+        width: 100%;
+        margin-inline: auto;        
+    }
+
+
+    /* 
+        - ABOUT
+    */
+
+    .about-banner{
+        max-width: 500px;
+        margin-inline:auto;
+    }
+}
+
+/* ---------------------
+    - MEDIA QUERY LARGER THAN 992
+----------------------*/
+
+@media (min-width: 992px) {
+    
+    /*---------------------
+        - CUSTOM PROPRETY
+    --------------------- */
+
+    :root{
+        
+
+        /* spacing */
+        --section-padding:80px
+
+
+    }
+
+    /* -----------------
+        - REUSED CSS
+    ------------------- */
+    /* REUSED CSS */
+    .container{
+        max-width: 960px;
+        width: 100%;
+        margin-inline: auto;        
+    }
+
+
+    /* 
+        - ABOUT
+    */
+
+    .about-banner{
+        max-width: 500px;
+        margin-inline:auto;
+    }
+}
