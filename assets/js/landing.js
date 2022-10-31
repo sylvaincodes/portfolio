@@ -166,3 +166,33 @@ const scrollReveal = function () {
 }
 window.addEventListener('scroll', scrollReveal);
 scrollReveal();
+
+
+// CURSOR
+const cursor = document.querySelector("[data-cursor]");
+const anchorElements = document.querySelectorAll("a");
+const buttons = document.querySelectorAll("button");
+
+document.body.addEventListener('mousemove', function (event) {
+        setTimeout(() => {
+            cursor.style.top = `${ event.clientY}px`;
+            cursor.style.left = `${ event.clientX}px`;
+        }, 100);
+})
+
+//add cursor hover class
+const hoverActive = function () {
+    cursor.classList.add('hovered');
+}
+
+//remove cursor hover class
+const hoverDesactive = function () {
+    cursor.classList.remove('hovered');
+}
+
+addEventOnElements(anchorElements , 'mousemove' ,hoverActive);
+addEventOnElements(anchorElements , 'mouseout' ,hoverDesactive);
+
+addEventOnElements(buttons , 'mousemove' ,hoverActive);
+addEventOnElements(buttons , 'mouseout' ,hoverDesactive);
+
