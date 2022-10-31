@@ -166,6 +166,10 @@ body {
     height: 100vh;
 }
 
+body.active{
+    animation: show 1s ease-in;
+}
+
 ::-webkit-scrollbar {
     width: 5px;
 }
@@ -184,42 +188,45 @@ body {
 -------------------------- */
 
 .loading {
-    position: fixed;
+    position: absolute;
     top: 0;
-    left: 0;
+    left: 0px;
     width: 100vw;
     height: 100vh;
     background: var(--white);
     z-index: 5;
     transform-origin: bottom;
-    transition: 0.5s var(--cubic-in);
-    transition-delay: 0.5s;
+    transition: 1.5s var(--cubic-in);
+    transition-delay: .5s;
     position: relative;
-    display: none;
+    display: block;
 }
 
 .loading.loaded {
-    transform: scaleY(0);
+    /* transform: scaleY(0); */
     pointer-events: none;
 }
+
 
 .loading>* {
     position: absolute;
     top: 40%;
     left: 40%;
     transform: translate(-50%, -50%);
-    transition: var(--transition-2);
+    transition: var(--transition-3);
 }
 
 .loading .img {
+    left: 180px;
     border-radius: var(--radius-circle);
 }
 
 .loading.loaded>* {
-    opacity: 0;
+    opacity: 1;
 }
 
 .loading .circle {
+    left: 180px;
     animation: rotate360 1.5s linear infinite;
 }
 
@@ -242,6 +249,9 @@ body {
 
 .flexitem {
     display: flex;
+}
+.hide{
+    display: none;
 }
 
 .justify-content-between {
@@ -568,7 +578,7 @@ h6 {
     font-size: var(--fs-2);
     display: flex;
     text-align: center;
-    font-weight: var(--fw-300);
+    font-weight: var(--fw-500);
 }
 
 .hero .wrapper .strong:nth-child(1) {
@@ -584,11 +594,12 @@ h6 {
 }
 
 .hero .hero-text {
-    font-size: var(--fs-5);
+    font-size: var(--fs-6);
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: var(--fw-500);
+    font-weight: var(--fw-300);
     padding-block-start: 100px;
+    font-size: var(--fs-7);
 }
 
 .hero .wrapper .space {
@@ -1190,11 +1201,10 @@ h6 {
 
     .hero-content h1 {
         text-align: left;
-        font-size: var(--fs-2);
+        font-size: var(--fs-1);
     }
 
     .hero .wrapper {
-        margin-block: -5px 100px;
     }
 
     /* ----------------------
@@ -1316,8 +1326,5 @@ h6 {
 
      .hero .container .image {
             top: 0;
-            width: 300px;
-            height: auto;
-            max-width: 350px;
         }
 }

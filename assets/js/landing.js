@@ -19,6 +19,9 @@ const loadingElement = document.querySelector('[data-loading');
 
 window.addEventListener('load', function () {
     loadingElement.classList.add("loaded");
+    setTimeout(() => {
+        // loadingElement.classList.add("hide");
+    }, 1000);
     document.body.classList.remove('active');
 })
 
