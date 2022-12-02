@@ -702,6 +702,9 @@ h6 {
     animation-delay: 3s;
 }
 
+#about .scroll-down{
+    margin-inline:inherit;
+}
 
 .scroll-down {
     display: grid;
@@ -749,17 +752,20 @@ h6 {
 }
 
 .category-list {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 35px 10px;
+    gap: 35px 10px; */
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
 }
 
 
 .category-item {
-    max-width: calc(50% - 5px);
+    /* max-width: calc(50% - 5px); */
 }
 
 .category-card .card-title {
@@ -973,7 +979,6 @@ h6 {
 .cursor.disabled {
     transform: translate(-50%, -50%) scale(0);
 }
-
 
 
 /* ---------------------
