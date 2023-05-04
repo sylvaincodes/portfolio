@@ -48,6 +48,7 @@
     */
 
     --gradient-1: linear-gradient(180deg, transparent, var(--smokey-black));
+    --gradient-3: linear-gradient(0deg, transparent, var(--smokey-black));
     --gradient-2: linear-gradient(180deg, var(--smokey-black) 25%, hsla(0, 0%, 0%, 0.6) 80%);
 
     /* 
@@ -307,12 +308,12 @@ h6 {
 
 .img-holder {
     aspect-ratio: 1/1;
-    background: var(--jet-1);
+    /* background: var(--jet-1); */
 }
 
 .has-before {
     position: relative;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .has-before::before {
@@ -1037,6 +1038,10 @@ h6 {
     .projet-card .btn-icon {
         transform-origin: top right;
         transform: scale(0);
+    }
+
+    .projet-card:hover .img-holder.has-before::before {
+        background: none;
     }
 
     .projet-card:is(:hover, :focus-visible) .btn-icon {
