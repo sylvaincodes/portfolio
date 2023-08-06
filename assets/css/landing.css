@@ -533,7 +533,7 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .hero .wrapper .space {
@@ -576,7 +576,7 @@ h6 {
     position: absolute;
     top: 0;
     font-weight: inherit;
-    font-size: var(--fs-2);
+    font-size: var(--fs-5);
     display: flex;
     text-align: center;
     font-weight: var(--fw-500);
