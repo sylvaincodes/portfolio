@@ -82,3 +82,9 @@
         transform: translateX(0px);
     }
 }
+
+@keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }

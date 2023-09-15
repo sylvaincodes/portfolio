@@ -625,32 +625,45 @@ h6 {
     position: relative;
 }
 
+.projet-card figure{
+    position: relative;
+}
+
 .projet-card :is(.card-content, .btn-icon) {
     position: absolute;
     z-index: 1;
 }
 
 .projet-card .card-content {
+    /* display: none; */
+   
+}
+
+.projet-card:hover .card-content{
+    display: block;
     width: 100%;
     padding: 30px 12px;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
+    background: rgba(26, 25, 41, 0.336);
+    color: white;
 }
 
-.projet-card .card-title {
-    color: var(--black);
-    font-size: var(--fs-5);
-    font-weight: var(--fw-500);
-    top: 20px;
-    left: calc(50% - 90px);
-    position: absolute;
-    text-transform: uppercase;
+.projet-card .card-content .h6{
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.projet-card > .card-title {
+    font-size: 25px;
 }
 
 .projet-card .card-tag {
-    color: var(--black);
-    font-size: var(--fs-5);
+    color: var(--white);
+    font-size: 20px;
     font-weight: var(--fw-500);
     top: 50px;
     position: absolute;
@@ -767,6 +780,22 @@ h6 {
 
 .category-item {
     /* max-width: calc(50% - 5px); */
+}
+
+.category-card{
+    overflow: hidden;
+
+}
+
+.category-card figure{
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.category-card figure:is(:hover, :focus-visible) {
+    opacity: 1;
+    transform: rotate(10deg) ;
+    transition: 1s ease;
 }
 
 .category-card .card-title {

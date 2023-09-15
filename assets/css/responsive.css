@@ -455,14 +455,15 @@
     }
 
     .card .card-content{
+		/* display: none; */
         position: absolute;
-        top: 100px;
-        left: 20px;
+        bottom: 0;
+        left: 0;
+		right: 0;
         color: var(--black);
         font-size: var(--fs-8);
-            z-index: 4;
-            width: 100%;
-
+        z-index: 4;
+        width: 100%;
     }
 
 
